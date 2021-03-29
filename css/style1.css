@@ -1,0 +1,127 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    background: gray;
+}
+
+header{
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.logo{
+    color: #069370;
+    height: 60px;
+    font-size: 36px;
+    line-height: 60px;
+    padding: 0 20px;
+    background: #ccc;
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+    font-weight: 700;
+    text-decoration: none;
+    margin: auto 0px;
+    
+}
+
+nav{
+    float: right;
+
+}
+
+.clearfix{
+    clear: both;
+}
+
+nav ul {
+    clear: both;
+    display: flex;
+    margin: 0;
+    padding: 5px 0px;
+}
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #262626;
+}
+
+nav ul li a.active, nav ul li :hover{
+    background: #069370;
+    transition: .5s;
+}
+
+@media (max-width: 1200px){
+    header{
+        margin: 20px;
+        
+    }
+}
+
+@media (max-width: 768px){
+    .menu-toggle{
+        display: block;
+        padding: 5px;
+        margin: 10px;
+        background: #ccc;
+        float: right;
+        cursor: pointer;
+        text-align: center;
+        font-size: 30px;
+        color: #069370;
+        
+    }
+
+    .menu-toggle::before{
+        content: '\f0c9 ';
+        font-family: fontAwesome;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-toggle.active:before{
+        content: '\f00d ';
+        
+    }
+
+    nav{
+        display: none;
+        transition: 1s;
+    }
+
+    nav.active{
+        transition: 0.5s;
+        display: block;
+        width: 100%;
+    }
+
+    nav.active ul{
+        display: block;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    nav.active ul li a:hover{
+        color: white;
+        font-size: 1.2em;
+    }
+}
+
+.body{
+    width: auto;
+    height: 200px;
+    background: tomato;
+}
